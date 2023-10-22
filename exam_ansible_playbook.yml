@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+  - name: Execute bash script
+    script: /home/osboxes/exam_bash_script.sh
+
+  - name: Verify that PHP application is accessible
+    uri:
+      url: http://{{ 10.0.2.15 }}/index.php
+      status_code: 200
+    register: php_application_response
+
+  - name: Fail if PHP application is not accessible
+    fail:
+      msg: "PHP application is not accessible at http://{{ 10.0.2.15 }}/index.php
+    when: php_application_response.status != 200
+ 
