@@ -8,7 +8,7 @@
 
 5. The script was then made executable by running chmod +x exam_bash_sript.sh 
 
-6. The LAMP stack was the deployed using ./exam_bash_script.sh and checked if the php application was accessible.
+6. The LAMP stack was the deployed using ./exam_bash_script.sh and checked if the php application was accessible. The ssh session was then exited.
 
 7. An ansible playbook was then created to execute the bash script on the slave node.
 
