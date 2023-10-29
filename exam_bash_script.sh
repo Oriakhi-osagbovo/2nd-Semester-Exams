@@ -29,7 +29,7 @@ composer install
 # Configure the Apache web server
 echo "Configuring Apache web server with i.p address of Virtual Machine"
 sudo a2enmod rewrite
-sudo a2ensite 10.0.2.15
+sudo a2ensite "193.16.20.32"
 sudo systemctl restart apache2
 
 # Secure MySQL installation
