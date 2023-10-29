@@ -8,13 +8,15 @@
 Vagrant.configure("2") do |config|
   config.vm.define "master" do |master|
    master.vm.box = "generic/ubuntu2204”
-    master.vm.provider "virtualbox" do |vb|
+   master.vm.network "private_network", ip: "193.16.20.32" 
+  master.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
   end
 
   config.vm.define "slave" do |slave|
     slave.vm.box = "generic/ubuntu2204"
+    master.vm.network "private_network", ip: "193.16.20.33" 
     slave.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
