@@ -6,7 +6,7 @@
 
 4. Script to automate the deployment of a LAMP Stack with cloned PHP application from Github, with all the necessary packages to be installed and to configure Apache web server and MYSQL was created.
 
-5. The script was then made executable by running chmod +x exam_bash_sript.sh 
+5. The script was then made executable by running 'chmod +x exam_bash_sript.sh' 
 
 6. The LAMP stack was the deployed using ./exam_bash_script.sh and checked if the php application was accessible. The ssh session was then exited.
 
