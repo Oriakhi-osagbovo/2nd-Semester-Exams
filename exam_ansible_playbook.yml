@@ -6,12 +6,12 @@
 
   - name: Verify that PHP application is accessible
     uri:
-      url: http://{{ 10.0.2.15 }}/index.php
+      url: http://{{ 193.16.20.33 }}/index.php
       status_code: 200
     register: php_application_response
 
   - name: Fail if PHP application is not accessible
     fail:
-      msg: "PHP application is not accessible at http://{{ 10.0.2.15 }}/index.php
+      msg: "PHP application is not accessible at http://{{ 193.16.20.32 }}/index.php
     when: php_application_response.status != 200
  
